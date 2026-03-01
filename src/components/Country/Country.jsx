@@ -8,7 +8,8 @@ const Country = ({country}) => {
         setVisited(visited?false:true)
     }
     return (
-        <div className='country'>
+        <div className={`country ${visited && 'country-visited'
+        }`}>
             <img src={country.flags.flags.png} alt={country.flags.flags.alt} />
             <h3>Name: {country.name.common}</h3>
             <p>Population:{country.population.population}</p>
